@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4dytp3o7laet"
+path="res://.godot/imported/takedown kill-002.ogg-b64d568b4e3bf324bb821a007a91383a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/takedown kill-002.ogg"
+dest_files=["res://.godot/imported/takedown kill-002.ogg-b64d568b4e3bf324bb821a007a91383a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

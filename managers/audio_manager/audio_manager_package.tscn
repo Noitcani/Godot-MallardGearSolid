@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm7fklx4f4fms"]
+
+[ext_resource type="Script" path="res://managers/audio_manager/audio_manager_package.gd" id="1_0u4qt"]
+
+[node name="AudioManagerPackage" type="Node" node_paths=PackedStringArray("sfx_layer", "music_layer")]
+process_mode = 3
+script = ExtResource("1_0u4qt")
+sfx_layer = NodePath("SFX_Layer")
+music_layer = NodePath("Music_Layer")
+
+[node name="SFX_Layer" type="Node" parent="."]
+
+[node name="Music_Layer" type="Node" parent="."]

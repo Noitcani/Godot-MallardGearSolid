@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcoymtx5lo3jm"
+path="res://.godot/imported/enemy hurt-002.ogg-f4b0f6c1313461b0daa89832b07af3eb.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/enemy hurt-002.ogg"
+dest_files=["res://.godot/imported/enemy hurt-002.ogg-f4b0f6c1313461b0daa89832b07af3eb.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

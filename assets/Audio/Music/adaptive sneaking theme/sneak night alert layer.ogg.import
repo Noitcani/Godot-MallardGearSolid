@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://fycdev068oy"
+path="res://.godot/imported/sneak night alert layer.ogg-7f7adfe3cb81bc59e9841a10b4bb53c5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/Music/adaptive sneaking theme/sneak night alert layer.ogg"
+dest_files=["res://.godot/imported/sneak night alert layer.ogg-7f7adfe3cb81bc59e9841a10b4bb53c5.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=83.0
+beat_count=0
+bar_beats=4

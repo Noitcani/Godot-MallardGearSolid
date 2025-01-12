@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bapliia874wbo"
+path="res://.godot/imported/takedown choke-001.ogg-9bfbe0999d44fa8a8f265cd7a94b32d8.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/takedown choke-001.ogg"
+dest_files=["res://.godot/imported/takedown choke-001.ogg-9bfbe0999d44fa8a8f265cd7a94b32d8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

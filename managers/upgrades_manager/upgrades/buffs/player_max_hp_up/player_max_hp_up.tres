@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://brov3263t8peb"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/player_max_hp_up/player_max_hp_up.gd" id="1_3p0ft"]
+
+[resource]
+script = ExtResource("1_3p0ft")
+upgrade_type = "buff"
+upgrade_name = "Player Max HP Up"
+upgrade_description = "Increase Drake's Max HP by 5"

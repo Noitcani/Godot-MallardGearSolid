@@ -1,0 +1,152 @@
+[gd_scene load_steps=5 format=3 uid="uid://51hhnxgsnk2k"]
+
+[ext_resource type="Script" path="res://components/upgrade_choice_overlay/upgrade_choice_card/upgrade_card.gd" id="1_ud7wd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kenng"]
+bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ilj8l"]
+bg_color = Color(1, 1, 1, 0.388235)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_demr0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.129412, 0.937255, 0.682353, 0.745098)
+
+[node name="UpgradeCard" type="Panel"]
+custom_minimum_size = Vector2(320, 450)
+theme_override_styles/panel = SubResource("StyleBoxFlat_kenng")
+script = ExtResource("1_ud7wd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ContentsContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="BuffContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="BuffNameLabel" type="Label" parent="MarginContainer/ContentsContainer/BuffContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_colors/font_color = Color(0.253575, 1, 0.22975, 1)
+theme_override_colors/font_shadow_color = Color(0.214103, 0.214103, 0.214103, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 20
+text = "Buff"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/ContentsContainer/BuffContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="UpgradeDescriptionContainer" type="PanelContainer" parent="MarginContainer/ContentsContainer/BuffContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ContentsContainer/BuffContainer/UpgradeDescriptionContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="BuffDescriptionLabel" type="Label" parent="MarginContainer/ContentsContainer/BuffContainer/UpgradeDescriptionContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Test Buff"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="LineDivider" type="PanelContainer" parent="MarginContainer/ContentsContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ilj8l")
+
+[node name="DebuffContainer" type="VBoxContainer" parent="MarginContainer/ContentsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+alignment = 1
+
+[node name="DebuffNameLabel" type="Label" parent="MarginContainer/ContentsContainer/DebuffContainer"]
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_colors/font_color = Color(0.788235, 0.305882, 0.654902, 1)
+theme_override_colors/font_shadow_color = Color(0.214103, 0.214103, 0.214103, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 20
+text = "Curse"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/ContentsContainer/DebuffContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="UpgradeDescriptionContainer" type="PanelContainer" parent="MarginContainer/ContentsContainer/DebuffContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ContentsContainer/DebuffContainer/UpgradeDescriptionContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DebuffDescriptionLabel" type="Label" parent="MarginContainer/ContentsContainer/DebuffContainer/UpgradeDescriptionContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Test Debuff"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="SelectedBorder" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_demr0")

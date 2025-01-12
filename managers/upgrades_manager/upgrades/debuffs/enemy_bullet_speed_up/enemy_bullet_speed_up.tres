@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c8uyxh0oia6s6"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_bullet_speed_up/enemy_bullet_speed_up.gd" id="1_0yejd"]
+
+[resource]
+script = ExtResource("1_0yejd")
+upgrade_type = "debuff"
+upgrade_name = "Enemies Bullet Speed Up"
+upgrade_description = "Increases Enemies' Bullet Speed by 10%"

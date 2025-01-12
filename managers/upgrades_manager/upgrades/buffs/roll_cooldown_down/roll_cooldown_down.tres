@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dqqjs35g2nsoi"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/roll_cooldown_down/roll_cooldown_down.gd" id="1_p5orq"]
+
+[resource]
+script = ExtResource("1_p5orq")
+upgrade_type = "buff"
+upgrade_name = "Roll Cooldown Down"
+upgrade_description = "Decrease Roll Cooldown by 10%"

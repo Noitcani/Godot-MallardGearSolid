@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bt5ctgb2e6eid"
+path="res://.godot/imported/player die.ogg-e94956c77e09d17f38374023f4c310f8.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/player die.ogg"
+dest_files=["res://.godot/imported/player die.ogg-e94956c77e09d17f38374023f4c310f8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dh4og4kp1xo2q"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/roll_duration_up/roll_duration_up.gd" id="1_dqw15"]
+
+[resource]
+script = ExtResource("1_dqw15")
+upgrade_type = "buff"
+upgrade_name = "Roll Duration Up"
+upgrade_description = "Increases Roll Duration (iFrame) by 20%"

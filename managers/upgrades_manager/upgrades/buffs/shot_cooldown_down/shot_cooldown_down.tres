@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c5t0o8mgureur"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/shot_cooldown_down/shot_cooldown_down.gd" id="1_vho20"]
+
+[resource]
+script = ExtResource("1_vho20")
+upgrade_type = "debuff"
+upgrade_name = "Shooting Cooldown Down"
+upgrade_description = "Decreases Shooting Cooldown by 10%"

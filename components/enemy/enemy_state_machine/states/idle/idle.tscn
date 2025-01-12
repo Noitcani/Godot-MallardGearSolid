@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c82hhatiwk5v"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_state_machine/states/idle/idle.gd" id="1_d7hcb"]
+
+[node name="Idle" type="Node"]
+script = ExtResource("1_d7hcb")
+
+[node name="IdleTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true

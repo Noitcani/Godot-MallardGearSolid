@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cqskdrw7l426x"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/player_bullet_damage_up/player_bullet_damage_up.gd" id="1_meyfr"]
+
+[resource]
+script = ExtResource("1_meyfr")
+upgrade_type = "buff"
+upgrade_name = "Player Bullet Damage Up"
+upgrade_description = "Increase Drake's Bullets Damage by 2"

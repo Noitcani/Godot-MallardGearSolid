@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1swlip2lqqh6"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_state_machine/states/patrol/patrol.gd" id="1_c555w"]
+
+[node name="Patrol" type="Node"]
+script = ExtResource("1_c555w")

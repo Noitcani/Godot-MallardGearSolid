@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://besy10sd2nvfg"
+path="res://.godot/imported/menu exit.ogg-9c555f4ea00f69827b5a2ea19df4628c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/menu exit.ogg"
+dest_files=["res://.godot/imported/menu exit.ogg-9c555f4ea00f69827b5a2ea19df4628c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

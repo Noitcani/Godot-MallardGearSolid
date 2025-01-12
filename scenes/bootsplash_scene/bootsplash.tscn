@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3j5367v1vlqh"]
+
+[ext_resource type="Script" path="res://scenes/bootsplash_scene/bootsplash.gd" id="1_4fi6j"]
+[ext_resource type="Texture2D" uid="uid://yr3rkxketrr8" path="res://assets/contri_logos/KritaLogo_forDark.png" id="2_qo1qp"]
+[ext_resource type="Texture2D" uid="uid://dsjbokegepvse" path="res://assets/contri_logos/lady-and-tortoise_transparent.png" id="3_ssx15"]
+[ext_resource type="Texture2D" uid="uid://bw6r2icb4636e" path="res://assets/contri_logos/scratchy-logo.png" id="4_48nsl"]
+
+[node name="Bootsplash" type="CanvasLayer"]
+script = ExtResource("1_4fi6j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LogosContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="LogosContainer"]
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+texture = ExtResource("2_qo1qp")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="LogosContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="LogosContainer"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+texture = ExtResource("3_ssx15")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="LogosContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="LogosContainer"]
+custom_minimum_size = Vector2(300, 250)
+layout_mode = 2
+texture = ExtResource("4_48nsl")
+expand_mode = 1
+stretch_mode = 5

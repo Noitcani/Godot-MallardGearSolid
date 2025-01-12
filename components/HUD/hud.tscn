@@ -1,0 +1,146 @@
+[gd_scene load_steps=4 format=3 uid="uid://cud51ivlk14b8"]
+
+[ext_resource type="Script" path="res://components/HUD/hud.gd" id="1_kivry"]
+[ext_resource type="PackedScene" uid="uid://bjg21tv3iv7hl" path="res://components/HUD/ammo_display/ammo_display.tscn" id="2_g2f6a"]
+[ext_resource type="PackedScene" uid="uid://duuxfewcdkale" path="res://components/HUD/exp_bar/exp_bar.tscn" id="3_nmvbp"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_kivry")
+ammo_display_scene = ExtResource("2_g2f6a")
+
+[node name="DayNightWidget" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 25.0
+offset_top = 22.0
+offset_right = 231.0
+offset_bottom = 91.0
+
+[node name="CurrentPhaseLabel" type="Label" parent="DayNightWidget"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 50
+text = "DAY {0}"
+vertical_alignment = 1
+
+[node name="TimeToNextPhase" type="Label" parent="DayNightWidget"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ui_label_normal"
+theme_override_font_sizes/font_size = 30
+text = "{0} seconds to {1}"
+vertical_alignment = 1
+
+[node name="EnemiesLeftWidget" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+offset_left = 1018.0
+offset_top = 34.0
+offset_right = 1247.0
+offset_bottom = 116.0
+alignment = 1
+
+[node name="EnemiesLeftLabelLabel" type="Label" parent="EnemiesLeftWidget"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ui_label_normal"
+theme_override_font_sizes/font_size = 30
+text = "Enemies Left:"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="EnemiesLeftLabel" type="Label" parent="EnemiesLeftWidget"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_type_variation = &"ui_label_normal"
+theme_override_font_sizes/font_size = 30
+text = "00"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AmmoWidget" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = 223.0
+offset_right = -27.0
+offset_bottom = 323.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 10
+
+[node name="AmmoDisplay" parent="AmmoWidget" instance=ExtResource("2_g2f6a")]
+layout_mode = 2
+
+[node name="ExpBar" parent="." instance=ExtResource("3_nmvbp")]
+unique_name_in_owner = true
+light_mask = 0
+offset_left = 77.0
+offset_top = 228.0
+offset_right = 102.0
+offset_bottom = 528.0
+mouse_filter = 2
+
+[node name="StatsWidget" type="VBoxContainer" parent="."]
+offset_left = 46.0
+offset_top = 607.0
+offset_right = 308.0
+offset_bottom = 677.0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="StatsWidget"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="StatsWidget/HBoxContainer"]
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "Level: "
+vertical_alignment = 1
+
+[node name="PlayerLevelLabel" type="Label" parent="StatsWidget/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "01"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="StatsWidget"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="StatsWidget/HBoxContainer2"]
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "Enemies Killed: "
+vertical_alignment = 1
+
+[node name="EnemiesKilledLabel" type="Label" parent="StatsWidget/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "00"
+vertical_alignment = 1
+
+[node name="MessageFlashLabel" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -155.5
+offset_bottom = -116.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1

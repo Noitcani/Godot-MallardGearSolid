@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cngngy18cxkt4"]
+
+[ext_resource type="Texture2D" uid="uid://b3on5qxxu2xqd" path="res://assets/UI/LightMaskShape.png" id="1_23ltj"]
+[ext_resource type="Script" path="res://components/lightsource/lightsource.gd" id="2_knkux"]
+
+[node name="Lightsource" type="PointLight2D"]
+color = Color(0.901961, 0.615686, 0, 1)
+energy = 5.0
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 1)
+texture = ExtResource("1_23ltj")
+offset = Vector2(110, 0)
+script = ExtResource("2_knkux")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 4
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectionArea"]
+polygon = PackedVector2Array(185.5, -83, 197, -56.5, 207.5, -16.5, 208.5, 1.5, 206.5, 19.5, 200, 46.5, 184.5, 84.5, 179.5, 84, 10, 2.5, 10, -4, 180, -84.5)

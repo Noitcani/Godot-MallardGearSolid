@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpi8pviwch4te"
+path="res://.godot/imported/sneak day alert layer.ogg-5d9da0b6d859caf955f8edf0fa974a1a.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/Music/adaptive sneaking theme/sneak day alert layer.ogg"
+dest_files=["res://.godot/imported/sneak day alert layer.ogg-5d9da0b6d859caf955f8edf0fa974a1a.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=83.0
+beat_count=0
+bar_beats=4

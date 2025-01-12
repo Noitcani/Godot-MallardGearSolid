@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://fidphuxnoxlf"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_state_machine/states/stun/stun.gd" id="1_tic2m"]
+
+[node name="Stun" type="Node"]
+script = ExtResource("1_tic2m")
+
+[node name="TakedownIntervalTimer" type="Timer" parent="."]
+unique_name_in_owner = true

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c0asictsojnck"
+path="res://.godot/imported/player gunshot-001.ogg-6b3482dfa7a35706f9d33c53d757c7fd.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Audio/SFX/player gunshot-001.ogg"
+dest_files=["res://.godot/imported/player gunshot-001.ogg-6b3482dfa7a35706f9d33c53d757c7fd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

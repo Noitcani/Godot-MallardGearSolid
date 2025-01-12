@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cst0ustyi1sg0"]
+
+[ext_resource type="Script" path="res://components/hp_component/hp_component.gd" id="1_2wcen"]
+
+[node name="HPComponent" type="Node"]
+script = ExtResource("1_2wcen")
+
+[node name="IFrameTimer" type="Timer" parent="."]
+one_shot = true

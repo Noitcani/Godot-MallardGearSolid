@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhaphvg0c4iwd"]
+
+[ext_resource type="Script" path="res://scenes/pause_menu/pause_menu.gd" id="1_jpj1f"]
+[ext_resource type="FontFile" uid="uid://b10cyhcarhunx" path="res://assets/Fonts/MGS_Title.tres" id="2_wqxp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bajqv"]
+bg_color = Color(0, 0, 0, 0.266667)
+
+[node name="Pause_menu" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_jpj1f")
+
+[node name="Background" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bajqv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -368.0
+offset_top = -111.0
+offset_right = 423.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Continue"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="Return_to_mm" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Exit to Main menu"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit Game
+"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -395.5
+offset_top = 57.0
+offset_right = 395.5
+offset_bottom = 203.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wqxp3")
+theme_override_font_sizes/font_size = 50
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1

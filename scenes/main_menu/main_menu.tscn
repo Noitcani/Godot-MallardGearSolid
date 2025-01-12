@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu7ub82x375b3"]
+
+[ext_resource type="Script" path="res://scenes/main_menu/main_menu.gd" id="1_ei6pv"]
+[ext_resource type="Texture2D" uid="uid://bea7dyf58dqmw" path="res://assets/GameBranding/gameLogo.png" id="2_4oujy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bbavr"]
+bg_color = Color(0.0562916, 0.0562916, 0.0562916, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_ei6pv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bbavr")
+
+[node name="ButtonsVbox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = 18.0
+offset_right = 300.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Start" type="Button" parent="ButtonsVbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 70)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start Game"
+
+[node name="Options" type="Button" parent="ButtonsVbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 70)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="Quit" type="Button" parent="ButtonsVbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 70)
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit Game
+"
+
+[node name="GameLogo" type="Sprite2D" parent="."]
+position = Vector2(641, 178)
+texture = ExtResource("2_4oujy")

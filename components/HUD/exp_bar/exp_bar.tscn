@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://duuxfewcdkale"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8pnyd"]
+bg_color = Color(0.584314, 0.584314, 0.584314, 0.784314)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 3
+border_width_bottom = 5
+corner_radius_top_left = 30
+corner_radius_bottom_right = 30
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdjfl"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 3
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 30
+corner_radius_bottom_right = 30
+corner_detail = 1
+
+[node name="ExpBar" type="ProgressBar"]
+custom_minimum_size = Vector2(25, 300)
+offset_right = 4.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_8pnyd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bdjfl")
+max_value = 1.0
+value = 0.5
+fill_mode = 3
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -18.0
+offset_top = 296.0
+offset_right = 53.0
+offset_bottom = 335.0
+theme_type_variation = &"ui_label_bold"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 25
+text = "EXP"
+horizontal_alignment = 1
+vertical_alignment = 1

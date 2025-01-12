@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://0l6cjxkqgwfw"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_state_machine/states/day_shoot/day_shoot.gd" id="1_6g5ed"]
+
+[node name="DayShoot" type="Node"]
+script = ExtResource("1_6g5ed")

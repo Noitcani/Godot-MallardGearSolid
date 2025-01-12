@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjev0u18inpbf"]
+
+[ext_resource type="Script" path="res://managers/enemies_manager/enemies_manager.gd" id="1_0kuqy"]
+
+[node name="EnemiesManager" type="Node"]
+script = ExtResource("1_0kuqy")
+
+[node name="SpawnTimer" type="Timer" parent="."]
+unique_name_in_owner = true

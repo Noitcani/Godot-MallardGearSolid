@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://1scyg81etint"]
+
+[ext_resource type="Script" path="res://managers/screen_transition_manager/screen_transitions_manager.gd" id="1_om6et"]
+
+[node name="ScreenTransitionsManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_om6et")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Mask" type="ColorRect" parent="CanvasLayer"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

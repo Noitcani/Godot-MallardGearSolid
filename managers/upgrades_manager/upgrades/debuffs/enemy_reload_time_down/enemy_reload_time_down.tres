@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cu6y3geu26lck"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_reload_time_down/enemy_reload_time_down.gd" id="1_x3lt6"]
+
+[resource]
+script = ExtResource("1_x3lt6")
+upgrade_type = "debuff"
+upgrade_name = "Enemy Reload Time Down"
+upgrade_description = "Decreases Enemy Reload Time by 10%"

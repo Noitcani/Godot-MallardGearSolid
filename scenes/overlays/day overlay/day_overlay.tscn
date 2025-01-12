@@ -1,0 +1,201 @@
+[gd_scene load_steps=10 format=3 uid="uid://bnd0wqp2ujid3"]
+
+[ext_resource type="Script" path="res://scenes/overlays/day overlay/day_overlay.gd" id="1_u05go"]
+[ext_resource type="Texture2D" uid="uid://p6nokidtqw43" path="res://assets/UI/ui sprites/ui-elements_W.png" id="2_pqxgh"]
+[ext_resource type="Texture2D" uid="uid://djxk8p1j37353" path="res://assets/UI/ui sprites/ui-elements_A.png" id="3_jhdux"]
+[ext_resource type="Texture2D" uid="uid://comrilkfh03r4" path="res://assets/UI/ui sprites/ui-elements_S.png" id="4_wkyg7"]
+[ext_resource type="Texture2D" uid="uid://dtyuc00jrgc5i" path="res://assets/UI/ui sprites/ui-elements_D.png" id="5_mjbqs"]
+[ext_resource type="Texture2D" uid="uid://sr104bsi1g5i" path="res://assets/UI/ui sprites/ui-elements_Mouse_L.png" id="6_bsg45"]
+[ext_resource type="Texture2D" uid="uid://ddgey4t67gc26" path="res://assets/UI/ui sprites/ui-elements_Mouse_R.png" id="7_iw7xs"]
+[ext_resource type="Texture2D" uid="uid://cqcwqpadtj48a" path="res://assets/UI/ui sprites/ui-elements_R.png" id="8_pjd23"]
+[ext_resource type="Texture2D" uid="uid://dpxd48rvbe8cl" path="res://assets/UI/ui sprites/ui-elements_P.png" id="9_mm506"]
+
+[node name="Day_overlay" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_u05go")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.00784314, 0.00784314, 0.941176)
+
+[node name="How to play" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -630.0
+offset_top = -355.0
+offset_right = -309.0
+offset_bottom = -262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_colors/font_color = Color(0.999834, 0.306482, 0.242691, 1)
+theme_override_colors/font_shadow_color = Color(0.233925, 0.233925, 0.233925, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 35
+text = "How to Play: 
+Day Phase"
+vertical_alignment = 1
+
+[node name="Enemies will shoot" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -272.0
+offset_top = 72.0
+offset_right = 339.0
+offset_bottom = 198.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 31
+text = "Enemies will shoot on sight
+Stay in the shadows. Avoid sunlight
+
+"
+
+[node name="Move" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -170.0
+offset_right = 128.5
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Move -> WASD
+"
+
+[node name="w" type="Sprite2D" parent="Move"]
+position = Vector2(296, 26)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_pqxgh")
+
+[node name="a" type="Sprite2D" parent="Move"]
+position = Vector2(360.5, 26)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_jhdux")
+
+[node name="s" type="Sprite2D" parent="Move"]
+position = Vector2(424.5, 26)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_wkyg7")
+
+[node name="d" type="Sprite2D" parent="Move"]
+position = Vector2(488, 26)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_mjbqs")
+
+[node name="Shoot_takedown" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.5
+offset_top = -84.0
+offset_right = 270.5
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Shoot/Takedown -> Left Mouse
+
+"
+
+[node name="mouseR" type="Sprite2D" parent="Shoot_takedown"]
+position = Vector2(585.5, 28)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_bsg45")
+
+[node name="Roll" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = 2.0
+offset_right = 165.0
+offset_bottom = 85.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Roll -> Right Mouse
+
+"
+
+[node name="mouseL" type="Sprite2D" parent="Roll"]
+position = Vector2(373, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_iw7xs")
+
+[node name="Reload" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 88.0
+offset_right = 136.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Reload -> R Key
+
+"
+
+[node name="r" type="Sprite2D" parent="Reload"]
+position = Vector2(320, 24)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_pjd23")
+
+[node name="Pause" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = 174.0
+offset_right = 132.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Pause -> P Key
+
+"
+
+[node name="p" type="Sprite2D" parent="Pause"]
+position = Vector2(316, 26)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_mm506")
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 262.0
+offset_right = 168.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+text = "OK"

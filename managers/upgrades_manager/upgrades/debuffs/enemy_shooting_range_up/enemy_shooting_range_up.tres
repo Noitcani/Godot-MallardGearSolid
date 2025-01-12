@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://w8hkyl6xl7ia"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_shooting_range_up/enemy_shooting_range_up.gd" id="1_w1an3"]
+
+[resource]
+script = ExtResource("1_w1an3")
+upgrade_type = "debuff"
+upgrade_name = "Enemy Shooting Range Up"
+upgrade_description = "Increase Enemie's Shooting Range by 10%"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dcgw204axlvpt"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_patrol_speed_up/enemy_patrol_speed_up.gd" id="1_uo77n"]
+
+[resource]
+script = ExtResource("1_uo77n")
+upgrade_type = "debuff"
+upgrade_name = "Enemies' Patrol Movespeed Up"
+upgrade_description = "Increase Enemies' Patrol Movespeed by 10%"

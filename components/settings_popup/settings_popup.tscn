@@ -1,0 +1,192 @@
+[gd_scene load_steps=5 format=3 uid="uid://d27mac6aab1be"]
+
+[ext_resource type="Script" path="res://components/settings_popup/settings_popup.gd" id="1_1ipp4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8q6tj"]
+bg_color = Color(0.160784, 0.160784, 0.160784, 0.941176)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjcf4"]
+bg_color = Color(0.0728427, 0.0728426, 0.0728426, 0.913725)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krcpn"]
+bg_color = Color(0.564962, 0.564962, 0.564961, 1)
+
+[node name="SettingsPopup" type="Control"]
+process_mode = 3
+modulate = Color(1, 1, 1, 0.839216)
+light_mask = 0
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ipp4")
+
+[node name="MarginContainer" type="Panel" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8q6tj")
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+light_mask = 0
+custom_minimum_size = Vector2(600, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -250.0
+offset_right = 300.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_type_variation = &"ActionsUIPanel"
+theme_override_styles/panel = SubResource("StyleBoxFlat_kjcf4")
+
+[node name="Label" type="Label" parent="MarginContainer/Panel"]
+light_mask = 0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -163.5
+offset_top = 25.0
+offset_right = 163.5
+offset_bottom = 125.0
+grow_horizontal = 2
+theme_type_variation = &"TitleLabel"
+theme_override_font_sizes/font_size = 60
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Panel"]
+light_mask = 0
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 47.0
+offset_top = -89.0
+offset_right = -53.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
+light_mask = 0
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "MASTER VOL."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterBusSlider" type="HSlider" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_krcpn")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
+light_mask = 0
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer2"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "MUSIC VOL."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MusicBusSlider" type="HSlider" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_krcpn")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/Panel/VBoxContainer"]
+light_mask = 0
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer3"]
+light_mask = 0
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "SFX VOL."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXBusSlider" type="HSlider" parent="MarginContainer/Panel/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_krcpn")
+max_value = 1.0
+step = 0.01
+value = 0.5
+
+[node name="ConfirmButton" type="Button" parent="MarginContainer/Panel"]
+unique_name_in_owner = true
+light_mask = 0
+custom_minimum_size = Vector2(250, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = 144.0
+offset_right = 125.0
+offset_bottom = 184.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "CONFIRM"

@@ -1,0 +1,111 @@
+[gd_scene load_steps=16 format=3 uid="uid://d4a3nrcm5v6r0"]
+
+[ext_resource type="Script" path="res://scenes/play_scene/play_scene.gd" id="1_k8ws1"]
+[ext_resource type="PackedScene" uid="uid://co36all3dpdes" path="res://components/player/player.tscn" id="1_sx6yj"]
+[ext_resource type="PackedScene" uid="uid://bjev0u18inpbf" path="res://managers/enemies_manager/enemies_manager.tscn" id="2_hh4xf"]
+[ext_resource type="PackedScene" uid="uid://d3aej8n5243mi" path="res://components/play_area/play_area.tscn" id="2_wblwx"]
+[ext_resource type="PackedScene" uid="uid://bhaphvg0c4iwd" path="res://scenes/pause_menu/pause_menu.tscn" id="3_ctmpu"]
+[ext_resource type="PackedScene" uid="uid://bjqsiw1ht0pss" path="res://managers/game_progression_manager/game_progression_manager.tscn" id="3_fvce5"]
+[ext_resource type="PackedScene" uid="uid://c2xj5qgnenreq" path="res://components/sun/sun.tscn" id="4_11vv4"]
+[ext_resource type="PackedScene" uid="uid://duujbwnplxhyh" path="res://managers/upgrades_manager/upgrades_manager.tscn" id="4_wlxuq"]
+[ext_resource type="PackedScene" uid="uid://cud51ivlk14b8" path="res://components/HUD/hud.tscn" id="5_2osnn"]
+[ext_resource type="Shader" path="res://assets/Shaders/CRT.gdshader" id="9_hb5s3"]
+[ext_resource type="Shader" path="res://assets/Shaders/Night_Vision.gdshader" id="10_rdoaw"]
+
+[sub_resource type="Gradient" id="Gradient_h6x8l"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_srd8n"]
+gradient = SubResource("Gradient_h6x8l")
+width = 5000
+height = 5000
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sm3cb"]
+shader = ExtResource("9_hb5s3")
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/warp_amount = 1.0
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.1
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.6
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_speed = 8.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cfelj"]
+shader = ExtResource("10_rdoaw")
+
+[node name="PlayScene" type="Node2D" groups=["play_scene"]]
+script = ExtResource("1_k8ws1")
+day_darkness_dim = null
+night_darkness_dim = null
+
+[node name="ManagersLayer" type="Node" parent="."]
+
+[node name="GameProgressionManager" parent="ManagersLayer" groups=["game_progression_manager"] instance=ExtResource("3_fvce5")]
+unique_name_in_owner = true
+
+[node name="EnemiesManager" parent="ManagersLayer" instance=ExtResource("2_hh4xf")]
+unique_name_in_owner = true
+
+[node name="UpgradesManager" parent="ManagersLayer" groups=["upgrades_manager"] instance=ExtResource("4_wlxuq")]
+unique_name_in_owner = true
+
+[node name="HUD" parent="." groups=["hud"] instance=ExtResource("5_2osnn")]
+unique_name_in_owner = true
+layer = 5
+
+[node name="Pause_menu" parent="." instance=ExtResource("3_ctmpu")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Darkness" type="PointLight2D" parent="."]
+unique_name_in_owner = true
+energy = 0.3
+blend_mode = 1
+texture = SubResource("GradientTexture2D_srd8n")
+
+[node name="PlayArea" parent="." groups=["play_area"] instance=ExtResource("2_wblwx")]
+unique_name_in_owner = true
+
+[node name="Sun" parent="." instance=ExtResource("4_11vv4")]
+unique_name_in_owner = true
+
+[node name="CharactersLayer" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="CharactersLayer" groups=["player"] instance=ExtResource("1_sx6yj")]
+unique_name_in_owner = true
+
+[node name="EnemiesLayer" type="Node2D" parent="CharactersLayer"]
+unique_name_in_owner = true
+y_sort_enabled = true
+
+[node name="BulletsLayer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CRT" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_sm3cb")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Night_Vision" type="ColorRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_cfelj")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

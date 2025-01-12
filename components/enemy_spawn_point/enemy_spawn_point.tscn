@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhw12odsa6k2f"]
+
+[ext_resource type="Script" path="res://components/enemy_spawn_point/enemy_spawn_point.gd" id="1_url6q"]
+
+[node name="EnemySpawnPoint" type="Marker2D"]
+script = ExtResource("1_url6q")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

@@ -1,0 +1,214 @@
+[gd_scene load_steps=4 format=3 uid="uid://qjcmf60hnpp5"]
+
+[ext_resource type="Script" path="res://scenes/end_scene/end_scene.gd" id="1_d44d8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o0ad7"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fl114"]
+bg_color = Color(0.13, 0.13, 0.13, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="EndScene" type="CanvasLayer"]
+script = ExtResource("1_d44d8")
+survive_color = Color(9.62615e-07, 0.808187, 0, 1)
+perish_color = Color(1, 0.321569, 0.501961, 1)
+
+[node name="Background" type="Panel" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o0ad7")
+
+[node name="OutcomeTitleLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 44.0
+offset_bottom = 135.0
+grow_horizontal = 2
+theme_type_variation = &"TitleLabel"
+theme_override_colors/font_shadow_color = Color(0.435192, 0.435192, 0.435192, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 70
+text = "You Survived 
+Till Extraction"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameStatsLabel" type="Label" parent="."]
+offset_left = 54.0
+offset_top = 203.0
+offset_right = 285.0
+offset_bottom = 242.0
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 30
+text = "GAME STATS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatsContainer" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -586.0
+offset_top = -102.0
+offset_right = 64.0
+offset_bottom = 298.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fl114")
+
+[node name="MarginContainer" type="MarginContainer" parent="StatsContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StatsContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="StatsContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "LEVEL"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "{VALUE}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="StatsContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "DAYS SURVIVED"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="DaysSurvivedLabel" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "{VALUE}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="StatsContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "ENEMIES KILLED"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="EnemiesKilledLabel" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "{VALUE}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="StatsContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "SHOTS ACCURACY"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ShotsAccuracyLabel" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "{VALUE}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="StatsContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"ui_label_bold"
+theme_override_font_sizes/font_size = 25
+text = "NO. OF TAKEDOWNS"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TakedownLabel" type="Label" parent="StatsContainer/MarginContainer/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "{VALUE}"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(500, 0)
+offset_left = 733.0
+offset_top = 272.0
+offset_right = 1233.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 25
+text = "Thank you for Playing!
+
+Post your score onto the Godot Wild Jam Discord!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PlayAgainButton" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 60)
+offset_left = 792.0
+offset_top = 499.0
+offset_right = 1192.0
+offset_bottom = 559.0
+text = "Play Again"

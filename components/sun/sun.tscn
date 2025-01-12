@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2xj5qgnenreq"]
+
+[ext_resource type="PackedScene" uid="uid://dtfbbkn7mqmjs" path="res://components/sun_lightsource/sun_lightsource.tscn" id="1_arhad"]
+[ext_resource type="Script" path="res://components/sun/sun.gd" id="1_m60vo"]
+
+[node name="Sun" type="Sprite2D"]
+offset = Vector2(2400, 0)
+script = ExtResource("1_m60vo")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+position = Vector2(2400, 0)
+remote_path = NodePath("../SunLightsource")
+
+[node name="SunLightsource" parent="." instance=ExtResource("1_arhad")]
+unique_name_in_owner = true
+position = Vector2(2400, 0)
+color = Color(1, 1, 1, 1)
+energy = 1.2

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjqsiw1ht0pss"]
+
+[ext_resource type="Script" path="res://managers/game_progression_manager/game_progression_manager.gd" id="1_twn6d"]
+
+[node name="GameProgressionManager" type="Node"]
+script = ExtResource("1_twn6d")
+
+[node name="DayNightTimer" type="Timer" parent="."]
+unique_name_in_owner = true

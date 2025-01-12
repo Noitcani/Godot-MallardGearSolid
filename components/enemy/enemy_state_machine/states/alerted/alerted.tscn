@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5xynwurq5xk4"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_state_machine/states/alerted/alerted.gd" id="1_f658j"]
+
+[node name="Alerted" type="Node"]
+script = ExtResource("1_f658j")

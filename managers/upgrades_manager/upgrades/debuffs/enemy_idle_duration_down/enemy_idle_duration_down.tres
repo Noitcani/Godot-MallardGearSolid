@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://sspqq2xhvrkd"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_idle_duration_down/enemy_idle_duration_down.gd" id="1_vhpot"]
+
+[resource]
+script = ExtResource("1_vhpot")
+upgrade_type = "debuff"
+upgrade_name = "Enemy Idle Duration Down"
+upgrade_description = "Decreases Enemies' Idle Duration by 10%"

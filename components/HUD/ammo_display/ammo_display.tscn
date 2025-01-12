@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjg21tv3iv7hl"]
+
+[ext_resource type="Texture2D" uid="uid://c4wn255wqrc3s" path="res://assets/Art/ui/ui-elements_5x.png" id="1_y6ohy"]
+[ext_resource type="Script" path="res://components/HUD/ammo_display/ammo_display.gd" id="2_tmxiq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0v8c"]
+atlas = ExtResource("1_y6ohy")
+region = Rect2(415, 15, 70, 170)
+
+[node name="AmmoDisplay" type="TextureRect"]
+custom_minimum_size = Vector2(30, 100)
+mouse_filter = 2
+texture = SubResource("AtlasTexture_h0v8c")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("2_tmxiq")
+enabled_color = Color(1, 1, 1, 0.862745)
+disabled_color = Color(0.314316, 0.314316, 0.314316, 0.862745)

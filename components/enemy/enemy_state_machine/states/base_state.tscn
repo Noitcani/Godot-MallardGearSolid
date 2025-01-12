@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://sm5dslgcno88"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_state_machine/states/base_state.gd" id="1_8nhek"]
+
+[node name="BaseState" type="Node"]
+script = ExtResource("1_8nhek")

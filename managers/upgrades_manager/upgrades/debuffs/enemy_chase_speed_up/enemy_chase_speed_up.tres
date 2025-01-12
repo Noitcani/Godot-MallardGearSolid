@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b5pqf7fxj3ibb"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_chase_speed_up/enemy_chase_speed_up.gd" id="1_qkkjk"]
+
+[resource]
+script = ExtResource("1_qkkjk")
+upgrade_type = "debuff"
+upgrade_name = "Enemies Chase Speed Up"
+upgrade_description = "Increase Enemies' Chase Movement Speed by 10%"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ces8561yy2g14"]
+
+[ext_resource type="Script" path="res://components/enemy/enemy_takedown_area/takedown_area.gd" id="1_psnfw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3x8wi"]
+radius = 60.0
+
+[node name="TakedownArea" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_psnfw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-123, 0)
+shape = SubResource("CircleShape2D_3x8wi")
+debug_color = Color(0, 0.634382, 0.429685, 0.42)

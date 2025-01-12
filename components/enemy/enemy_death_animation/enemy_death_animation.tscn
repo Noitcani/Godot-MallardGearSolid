@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://qcg0r45cbaa"]
+
+[ext_resource type="Texture2D" uid="uid://c24dpgfx2ej20" path="res://assets/Art/character_sprites/sprite-sheet_enemy_soldier_5x.png" id="1_uxjru"]
+[ext_resource type="Script" path="res://components/enemy/enemy_death_animation/enemy_death_animation.gd" id="2_rrfn6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lmx2"]
+atlas = ExtResource("1_uxjru")
+region = Rect2(0, 1350, 100, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3inp"]
+atlas = ExtResource("1_uxjru")
+region = Rect2(0, 1200, 100, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jmlac"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lmx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3inp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3inp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3inp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v3inp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.5
+}]
+
+[node name="EnemyDeathAnimation" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_jmlac")
+autoplay = "default"
+script = ExtResource("2_rrfn6")

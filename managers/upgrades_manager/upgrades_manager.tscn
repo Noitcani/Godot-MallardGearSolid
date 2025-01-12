@@ -1,0 +1,24 @@
+[gd_scene load_steps=18 format=3 uid="uid://duujbwnplxhyh"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades_manager.gd" id="1_cnumy"]
+[ext_resource type="Resource" uid="uid://h1f6asub1aus" path="res://managers/upgrades_manager/upgrades/buffs/reload_time_down/reload_time_down.tres" id="2_iiw5k"]
+[ext_resource type="Resource" uid="uid://c5t0o8mgureur" path="res://managers/upgrades_manager/upgrades/buffs/shot_cooldown_down/shot_cooldown_down.tres" id="3_ryvcf"]
+[ext_resource type="Resource" uid="uid://dycp7wsqe3jja" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_hp_up/enemy_hp_up.tres" id="4_lhmf7"]
+[ext_resource type="Resource" uid="uid://v6ji63woj8pc" path="res://managers/upgrades_manager/upgrades/buffs/max_ammo_capacity_up/max_ammo_capacity_up.tres" id="4_xi4sr"]
+[ext_resource type="Resource" uid="uid://cqskdrw7l426x" path="res://managers/upgrades_manager/upgrades/buffs/player_bullet_damage_up/player_bullet_damage_up.tres" id="5_2tn2w"]
+[ext_resource type="Resource" uid="uid://cu6y3geu26lck" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_reload_time_down/enemy_reload_time_down.tres" id="5_rr45w"]
+[ext_resource type="Resource" uid="uid://dqqjs35g2nsoi" path="res://managers/upgrades_manager/upgrades/buffs/roll_cooldown_down/roll_cooldown_down.tres" id="6_ujc4w"]
+[ext_resource type="Resource" uid="uid://w8hkyl6xl7ia" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_shooting_range_up/enemy_shooting_range_up.tres" id="7_8cioo"]
+[ext_resource type="Resource" uid="uid://brov3263t8peb" path="res://managers/upgrades_manager/upgrades/buffs/player_max_hp_up/player_max_hp_up.tres" id="7_s8gyw"]
+[ext_resource type="Resource" uid="uid://cidph02tdmb5l" path="res://managers/upgrades_manager/upgrades/buffs/player_movement_speed_up/player_movement_speed_up.tres" id="8_ia4kt"]
+[ext_resource type="Resource" uid="uid://cuxlox6w45od3" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_bullet_damage_up/enemy_bullet_damage_up.tres" id="9_lv1ad"]
+[ext_resource type="Resource" uid="uid://dh4og4kp1xo2q" path="res://managers/upgrades_manager/upgrades/buffs/roll_duration_up/roll_duration_up.tres" id="9_qa3pu"]
+[ext_resource type="Resource" uid="uid://dcgw204axlvpt" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_patrol_speed_up/enemy_patrol_speed_up.tres" id="11_b5eit"]
+[ext_resource type="Resource" uid="uid://b5pqf7fxj3ibb" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_chase_speed_up/enemy_chase_speed_up.tres" id="12_t8cy0"]
+[ext_resource type="Resource" uid="uid://c8uyxh0oia6s6" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_bullet_speed_up/enemy_bullet_speed_up.tres" id="15_ygo3n"]
+[ext_resource type="Resource" uid="uid://sspqq2xhvrkd" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_idle_duration_down/enemy_idle_duration_down.tres" id="16_ljms1"]
+
+[node name="UpgradesManager" type="Node"]
+script = ExtResource("1_cnumy")
+buff_array = Array[Resource("res://managers/upgrades_manager/upgrades/base_resource.gd")]([ExtResource("2_iiw5k"), ExtResource("3_ryvcf"), ExtResource("4_xi4sr"), ExtResource("5_2tn2w"), ExtResource("6_ujc4w"), ExtResource("7_s8gyw"), ExtResource("8_ia4kt"), ExtResource("9_qa3pu")])
+debuff_array = Array[Resource("res://managers/upgrades_manager/upgrades/base_resource.gd")]([ExtResource("4_lhmf7"), ExtResource("5_rr45w"), ExtResource("7_8cioo"), ExtResource("9_lv1ad"), ExtResource("11_b5eit"), ExtResource("12_t8cy0"), ExtResource("15_ygo3n"), ExtResource("16_ljms1")])

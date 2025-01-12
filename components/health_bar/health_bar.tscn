@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnx83jbqaexf2"]
+
+[ext_resource type="Script" path="res://components/health_bar/health_bar.gd" id="1_6gs5f"]
+
+[sub_resource type="Gradient" id="Gradient_r857y"]
+resource_local_to_scene = true
+colors = PackedColorArray(1, 0.381127, 0.504527, 1, 0.235294, 0.886275, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m16v4"]
+bg_color = Color(0.494118, 0.494118, 0.494118, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.254902, 0.254902, 0.254902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n6n2g"]
+resource_local_to_scene = true
+bg_color = Color(0.329412, 0.596078, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[node name="HealthBar" type="CenterContainer"]
+light_mask = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_6gs5f")
+gradient = SubResource("Gradient_r857y")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+light_mask = 0
+custom_minimum_size = Vector2(200, 40)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_m16v4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_n6n2g")
+max_value = 1.0
+value = 0.5
+show_percentage = false

@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://hiks5r52quxt"]
+
+[ext_resource type="Script" path="res://components/player/player_status_bar/player_status_bar.gd" id="1_qgjhh"]
+[ext_resource type="Texture2D" uid="uid://optkjny0e7ma" path="res://assets/Art/ui/ui-elements_cooldown-icons_5x.png" id="2_sof8m"]
+[ext_resource type="Texture2D" uid="uid://ca2p0jw0isd3w" path="res://components/player/player_status_bar/Square 50x50.png" id="3_xl8bl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gcmk"]
+atlas = ExtResource("2_sof8m")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txqif"]
+atlas = ExtResource("2_sof8m")
+region = Rect2(0, 0, 101, 100)
+
+[node name="PlayerStatusBar" type="HBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -25.0
+offset_right = 52.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("1_qgjhh")
+
+[node name="RollingCooldownIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_7gcmk")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RollingCooldownProgressBar" type="TextureProgressBar" parent="RollingCooldownIcon"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+max_value = 1.0
+step = 0.01
+value = 0.6
+fill_mode = 5
+texture_progress = ExtResource("3_xl8bl")
+tint_progress = Color(0.996078, 0.0862745, 0.533333, 0.615686)
+
+[node name="ShootingCooldownIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_txqif")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ShootingCooldownProgressBar" type="TextureProgressBar" parent="ShootingCooldownIcon"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+max_value = 1.0
+step = 0.01
+value = 0.7
+fill_mode = 5
+texture_progress = ExtResource("3_xl8bl")
+tint_progress = Color(0.996078, 0.0862745, 0.533333, 0.615686)

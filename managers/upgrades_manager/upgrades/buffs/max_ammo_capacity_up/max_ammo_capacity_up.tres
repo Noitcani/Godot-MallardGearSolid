@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://v6ji63woj8pc"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/max_ammo_capacity_up/max_ammo_capacity_up.gd" id="1_vqdx4"]
+
+[resource]
+script = ExtResource("1_vqdx4")
+upgrade_type = "buff"
+upgrade_name = "Max Ammo Capacity Up"
+upgrade_description = "Increases Max Ammo Capacity by 1"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://h1f6asub1aus"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/buffs/reload_time_down/reload_time_down.gd" id="1_umlen"]
+
+[resource]
+script = ExtResource("1_umlen")
+upgrade_type = "buff"
+upgrade_name = "Reload Time Down"
+upgrade_description = "Decrease Reload Time by 10%"

@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://htxi1ak6vq2w"]
+
+[ext_resource type="Script" path="res://scenes/overlays/day overlay/day_overlay.gd" id="1_rbgbn"]
+[ext_resource type="Texture2D" uid="uid://sr104bsi1g5i" path="res://assets/UI/ui sprites/ui-elements_Mouse_L.png" id="2_wnxfs"]
+
+[node name="Night_overlay" type="CanvasLayer"]
+process_mode = 3
+layer = 10
+script = ExtResource("1_rbgbn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.00784314, 0.00784314, 0.941176)
+
+[node name="How to play" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -630.0
+offset_top = -355.0
+offset_right = -309.0
+offset_bottom = -262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"ui_label_bold"
+theme_override_colors/font_color = Color(0.999834, 0.306482, 0.242691, 1)
+theme_override_colors/font_shadow_color = Color(0.233925, 0.233925, 0.233925, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 35
+text = "How to Play: 
+Night Phase"
+vertical_alignment = 1
+
+[node name="Enemies will shoot" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -387.0
+offset_top = -205.0
+offset_right = 387.0
+offset_bottom = 93.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "The enemy are now on patrol with flashlights
+
+Use your night-vision goggles to gain the 
+tactical advantage
+
+This is the perfect time to sneak behind them 
+and perform a Takedown with:
+"
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemies will shoot"]
+position = Vector2(555, 285)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_wnxfs")
+
+[node name="Button" type="Button" parent="."]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = 214.0
+offset_right = 168.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+text = "OK"

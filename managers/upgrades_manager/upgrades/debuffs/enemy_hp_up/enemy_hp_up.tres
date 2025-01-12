@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dycp7wsqe3jja"]
+
+[ext_resource type="Script" path="res://managers/upgrades_manager/upgrades/debuffs/enemy_hp_up/enemy_hp_up.gd" id="1_tq68q"]
+
+[resource]
+script = ExtResource("1_tq68q")
+upgrade_type = "debuff"
+upgrade_name = "Enemy HP Up"
+upgrade_description = "Increases Enemy HP by 2"
